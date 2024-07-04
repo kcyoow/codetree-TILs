@@ -2,11 +2,12 @@
 using namespace std;
 
 int main() {
-    int N, arr[110][110] = {0,};
+    int N, arr[220][220] = {0,};
     cin >> N;
     for(int i = 0; i < N; i++){
         int x, y;
         cin >> x >> y;
+        x += 100; y+= 100;
         for(int i = x; i < x+8; i++){
             for(int j = y; j < y+8; j++){
                 arr[i][j] = 1;
