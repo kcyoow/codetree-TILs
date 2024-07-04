@@ -45,6 +45,12 @@ int main(){
             }
         }
     }
+    if(minx == 1e6){
+        minx = 0;
+    }
+    if(miny == 1e6){
+        miny = 0;
+    }
     cout << (maxx-minx)*(maxy-miny);
 
 
