@@ -18,7 +18,7 @@ int main(){
     }
     for(int i = 1; i <= N; i++){
         if(P == i) dev.push_back(make_pair(1, K));
-        else dev.push_back(make_tuple(0, K));
+        else dev.push_back(make_pair(0, K));
     }
     sort(log.begin(), log.end());
     for(int i = 0; i < log.size(); i++){
