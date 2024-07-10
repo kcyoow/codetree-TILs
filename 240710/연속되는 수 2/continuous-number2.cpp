@@ -3,7 +3,7 @@
 using namespace std;
 
 int main(){
-    int N, cnt = 1, before, max = -1e5;
+    int N, cnt = 1, before, max = 1;
     cin >> N;
     cin >> before;
     for(int i = 1; i < N; i++){
