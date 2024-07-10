@@ -3,15 +3,15 @@
 using namespace std;
 
 int main(){
-    int N, cnt = 1, before, max = 1;
+    int N, arr[1001], cnt = 1, max = 0;
     cin >> N;
-    cin >> before;
-    for(int i = 1; i < N; i++){
+    for(int i = 0; i < N; i++){
         int a;
         cin >> a;
-        if(i == 0 || a != before) {max = (max<cnt?cnt:max); cnt = 1;}
+        arr[i] = a;
+        if(i == 0 || arr[i] != arr[i-1]) cnt = 1;
         else cnt++;
-        before = a;
+        max = (max<cnt?cnt:max);
     }
     cout << max;
 }
