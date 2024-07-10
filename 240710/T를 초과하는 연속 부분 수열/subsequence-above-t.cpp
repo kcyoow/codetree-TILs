@@ -9,7 +9,7 @@ int main() {
         int a;
         cin >> a;
         arr[i] = a;
-        if(i == 0 || arr[i-1] >= arr[i]) cnt = 0;
+        if(i == 0 || arr[i-1] > arr[i]) cnt = (arr[i] > t ? 1 : 0);
         else{
             if(arr[i] > t) cnt++;
         }
