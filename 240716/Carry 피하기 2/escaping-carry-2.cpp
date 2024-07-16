@@ -55,5 +55,6 @@ int main(){
         ans = ans2;
         ind++;
     }
-    cout << maxnum;
+    if(maxnum < 0) cout << -1;
+    else cout << maxnum;
 }
