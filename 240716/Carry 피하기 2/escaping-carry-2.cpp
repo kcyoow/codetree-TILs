@@ -40,7 +40,9 @@ int main(){
                         key2 /= 10;
                     }
                     if(is_allowed){
-                        maxnum = max(maxnum, ans[i].second + v[j]);
+                        if(ind == 3){
+                            maxnum = max(maxnum, ans[i].second + v[j]);
+                        }
                         vector<int> v2;
                         vector<int>::iterator it = v2.end();
                         v2.insert(it, ans[i].first.begin(), ans[i].first.end());
