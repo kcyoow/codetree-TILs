@@ -1,5 +1,6 @@
 #include <iostream>
 #include <stack>
+
 using namespace std;
 
 int main(){
@@ -7,12 +8,13 @@ int main(){
     stack<pair<int, int> > s;
     cin >> N >> M;
     for(int i = 0; i < N; i++){
-        for(int j = 0; j < N; j++){
+        for(int j = 0; j < M; j++){
             int a;
             cin >> a; 
             arr[i][j] = a;
         }
     }
+    
     s.push(make_pair(0, 0));
     bool isAvailable = false;
     while(!s.empty()){
@@ -27,7 +29,7 @@ int main(){
         for(int i = 0; i < 2; i++){
             int dy = y+dir[i][1];
             int dx = x+dir[i][0];
-            if(!visited[dy][dx] && arr[dy][dx] != 0 && dy >= 0 && dy < N && dx >= 0 && dx < M){
+            if((!visited[dy][dx]) && (arr[dy][dx] != 0) && (dy >= 0 && dy < N && dx >= 0 && dx < M)){
                 s.push(make_pair(dy, dx));
             }
         }
