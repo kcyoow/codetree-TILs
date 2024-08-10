@@ -5,16 +5,16 @@ using namespace std;
 int visited[1001];
 vector<vector<int> > v(1001);
 int k = 0;
-int visiting(int start){
+void visiting(int start){
     visited[start] = 1;
     if(!v[start].empty()){
         for(int i = 0; i < v[start].size(); i++){
             if(!visited[v[start][i]]){
-                return visiting(v[start][i]) + 1;
+                k++;
+                visiting(v[start][i]);
             }
         }
     }
-    return 0;
 }
 
 int main(){
@@ -27,5 +27,6 @@ int main(){
         v[a].push_back(b);
         v[b].push_back(a);
     }
-    cout << visiting(1);
+    visiting(1);
+    cout << k;
 }
