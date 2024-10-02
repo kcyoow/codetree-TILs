@@ -3,7 +3,7 @@
 using namespace std;
 
 int main(){
-    int a[405], t, n;
+    int a[610], t, n;
     cin >> n >> t;
     t%=(3*n);
     t = t>0?3*n-t:0;
