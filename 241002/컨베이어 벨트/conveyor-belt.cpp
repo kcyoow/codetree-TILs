@@ -6,7 +6,7 @@ int main(){
     int a[405], t, n;
     cin >> n >> t;
     t%=(2*n);
-    t = 2*n-t;
+    t = t>0?2*n-t:0;
     for(int i = 0; i < 2*n; i++){
         cin >> a[i];
     }
